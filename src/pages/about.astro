@@ -1,5 +1,5 @@
 ---
-import Navigation from '../components/Navigation.astro';
+import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 
@@ -35,7 +35,7 @@ const skillColor = "navy";
 		</style>
 	</head>
 	<body>
-		<Navigation />
+    	<Header />
 		<h1>{pageTitle}</h1>
         <p>I am currently linving in the {identity.country} and working as an {identity.occupation}</p>
 		<p>I am building a personal portfolio website using Astro.</p>
