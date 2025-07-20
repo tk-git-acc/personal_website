@@ -21,7 +21,3 @@ This is my first blog post, where I am setting up my website using Astro.
 2. **Making Pages**: I then learned how to make pages by creating new `.astro` files and placing them in the `src/pages/` folder.
 
 3. **Making Blog Posts**: This is my first blog post. I now have Astro pages and Markdown blog-posts.
-
-## What's next?
-
-Next I will look at styling and adding more content to my site.
