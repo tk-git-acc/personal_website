@@ -4,24 +4,35 @@ import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 
 const pageTitle = "Blog";
+
+// Correct path (same directory)
+const posts = await Astro.glob('./posts/*.md');
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-    	<title>{pageTitle}</title>
-	</head>
-	<body>
-    	<Header />
-		<h1>{pageTitle}</h1>
-        <ul>
-            <li><a href="/posts/post-1/">Post 1</a></li>
-            <li><a href="/posts/post-2/">Post 2</a></li>
-            <li><a href="/posts/post-3/">Post 3</a></li>  
-        </ul>
-    	<Footer />
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <Header />
+    <h1>{pageTitle}</h1>
+		<ul>
+		{posts.map((post) => {
+			const rawDate = new Date(post.frontmatter.pubDate);
+			const formattedDate = rawDate.toLocaleDateString("en-GB"); // UK format
+			return (
+			<li>
+				<a href={post.url}>
+				{formattedDate}: {post.frontmatter.title}
+				</a>
+			</li>
+			);
+		})}
+		</ul>
+    <Footer />
+  </body>
 </html>

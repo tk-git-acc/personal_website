@@ -1,6 +1,6 @@
 ---
-title: ''
-pubDate: 
+title: 'Adding components and styling to my site'
+pubDate: 2025-08-20
 description: ''
 author: 'tk'
 image:
