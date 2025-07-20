@@ -16,8 +16,8 @@ This is my first blog post, where I am setting up my website using Astro.
 
 ## What I've accomplished
 
-1. **Installing Astro**: First, I created a new Astro project and set up my online accounts.
+1. **Installing Astro**: Created a new Astro project and set up my online accounts & environment.
 
-2. **Making Pages**: I then learned how to make pages by creating new `.astro` files and placing them in the `src/pages/` folder.
+2. **Making Pages**: Learned how to make pages by creating new `.astro` files and placing them in the `src/pages/` folder.
 
 3. **Making Blog Posts**: This is my first blog post. I now have Astro pages and Markdown blog-posts.
