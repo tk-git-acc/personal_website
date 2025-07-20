@@ -1,6 +1,6 @@
 ---
 title: 'Getting started building my website with Astro'
-pubDate: 2025-08-19
+pubDate: 2025-07-19
 description: 'Starting my Astro site, creating the first pages.'
 author: 'tk'
 image:

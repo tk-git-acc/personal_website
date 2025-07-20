@@ -1,6 +1,6 @@
 ---
 title: 'Adding components and styling to my site'
-pubDate: 2025-08-20
+pubDate: 2025-07-20
 description: 'Adding components for reused HTML, adding styling and my second blog post.'
 author: 'tk'
 image:
