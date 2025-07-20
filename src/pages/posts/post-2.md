@@ -10,7 +10,7 @@ tags: ["astro", "blogging", "learning in public"]
 ---
 # Second Blog Post
 
-Published on: 20/08/2025
+Published on: 20/07/2025
 
 In my second day of working on my new personal portfolio Astro website, I added to the site by:
 

@@ -10,7 +10,7 @@ tags: ["astro", "blogging", "learning in public"]
 ---
 # Getting started building my website with Astro
 
-Published on: 19/08/2025
+Published on: 19/07/2025
 
 This is my first blog post, where I am setting up my website using Astro.
 
