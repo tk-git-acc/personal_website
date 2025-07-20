@@ -1,4 +1,5 @@
 ---
+import Navigation from '../components/Navigation.astro';
 import '../styles/global.css';
 
 const pageTitle = "About Me";
@@ -33,9 +34,7 @@ const skillColor = "navy";
 		</style>
 	</head>
 	<body>
-		<a href="/">Home</a>
-		<a href="/about/">About</a>
-		<a href="/blog/">blog</a>
+		<Navigation />
 		<h1>{pageTitle}</h1>
         <p>I am currently linving in the {identity.country} and working as an {identity.occupation}</p>
 		<p>I am building a personal portfolio website using Astro.</p>
