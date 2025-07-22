@@ -1,9 +1,9 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 import '../styles/global.css';
-
-const pageTitle = "About Me";
+const pageTitle = "About";
 
 const identity = {
   name: "tk",
@@ -15,34 +15,13 @@ const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "SQL", "Azure", "
 
 const skillColor = "navy";
 ---
+<BaseLayout pageTitle={pageTitle}>
+	<p>I live in the {identity.country}, working as an {identity.occupation}.</p>
+	<p>I am buiding this site using the Astro JS web framework.</p>
+	<p>This website will include projects that I work on.</p>
+	<p>My skills & experience include:</p>
+	<ul>
+	{skills.map((skill) => <li class="skill">{skill}</li>)}
+	</ul>
+</BaseLayout>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-    	<title>{pageTitle}</title>
-		<style define:vars={{skillColor}}>
-		.skill {
-    		color: var(--skillColor);
-			font-weight: bold;
-		}
-		</style>
-	</head>
-	<body>
-    	<Header />
-		<h1>{pageTitle}</h1>
-        <p>I live in the {identity.country}, working as an {identity.occupation}.</p>
-		<p>I am buiding this site using the Astro JS web framework.</p>
-        <p>This website will include projects that I work on.</p>
-		<p>My skills & experience include:</p>
-			<ul>
-			{skills.map((skill) => <li class="skill">{skill}</li>)}
-			</ul>
-		<Footer />
-		<script>
-			import "../scripts/menu.js";
-		</script>
-</body>
-</html>
