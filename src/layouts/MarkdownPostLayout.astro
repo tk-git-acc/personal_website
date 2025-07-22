@@ -3,6 +3,7 @@ import "../styles/global.css"
 const { frontmatter } = Astro.props;
 ---
 <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" />
 <h1>{frontmatter.title}</h1>
 <p>{frontmatter.pubDate.toString().slice(0,10)}</p>
 <p><em>{frontmatter.description}</em></p>
