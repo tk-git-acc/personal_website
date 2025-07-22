@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Adding components and styling to my site'
 pubDate: 2025-07-20
 description: 'Adding components for reused HTML, adding styling and my second blog post.'
@@ -8,10 +9,6 @@ image:
     alt: 'The Astro logo on a dark background with a pink glow.'
 tags: ["astro", "blogging", "learning in public"]
 ---
-# Second Blog Post
-
-Published on: 20/07/2025
-
 In my second day of working on my new personal portfolio Astro website, I added to the site by:
 
 1. Adding components for re-used HTML - for example, the footer, header, navigation and social elements.

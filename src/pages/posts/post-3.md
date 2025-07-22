@@ -1,14 +1,14 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Creating a layout component'
 pubDate: 2025/07/22
-description: 'Creating BaseLayer.astro to re-use my layout across my pages.'
+description: 'Creating BaseLayout.astro to re-use my layout across my pages.'
 author: 'tk'
 image:
     url: 'https://docs.astro.build/assets/rose.webp'
     alt: 'The Astro logo on a dark background with a pink glow.'
 tags: ["astro", "blogging", "learning in public"]
 ---
-# Third Blog Post
 Today, I refactored my code to prevent my page from repeatedly rendering Astro components on each page.
 
 Instead of the repeated HTML for Index, About and Blog, I moved to this new BaseLayout file. This BaseLayout file was then imported into each of these pages instead and utilised through the "<BaseLayout>" tags on each page instead.

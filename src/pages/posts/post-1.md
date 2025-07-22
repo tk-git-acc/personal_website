@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Getting started building my website with Astro'
 pubDate: 2025-07-19
 description: 'Starting my Astro site, creating the first pages.'
@@ -8,10 +9,6 @@ image:
     alt: 'The Astro logo on a dark background with a pink glow.'
 tags: ["astro", "blogging", "learning in public"]
 ---
-# Getting started building my website with Astro
-
-Published on: 19/07/2025
-
 This is my first blog post, where I am setting up my website using Astro.
 
 ## What I've accomplished
