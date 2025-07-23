@@ -7,7 +7,7 @@ author: 'tk'
 image:
     url: 'https://docs.astro.build/assets/rose.webp'
     alt: 'The Astro logo on a dark background with a pink glow.'
-tags: ["astro", "blogging", "learning in public"]
+tags: ["astro", "blogging", "learning in public", "CSS"]
 ---
 In my second day of working on my new personal portfolio Astro website, I added to the site by:
 
