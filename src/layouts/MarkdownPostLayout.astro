@@ -1,10 +1,10 @@
 ---
-/*import "../styles/global.css"*/
 import BaseLayout from './BaseLayout.astro';
 const { frontmatter } = Astro.props;
+const formattedDate = new Date(frontmatter.pubDate).toLocaleDateString("en-GB");
 ---
 <BaseLayout pageTitle={frontmatter.title}>
-    <p>{frontmatter.pubDate.toString().slice(0,10)}</p>
+    <p>{formattedDate}</p>
     <p><em>{frontmatter.description}</em></p>
     <div class="tags">
         {frontmatter.tags.map((tag: string) => (
