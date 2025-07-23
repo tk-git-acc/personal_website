@@ -40,3 +40,20 @@ Finally, I added the line below:
 `{posts.map((post: any) => <BlogPost post={post} />)}`
 
 This loops through the post array and creates a <BlogPost /> component for each.
+
+## Building a tag index page
+Having built the dynamically created tag pages, I now needed to build a tag index page.
+
+I created a new page `src/pages/tags/index.astro`, imported my BaseLayout and set the page title.
+
+I then gave the page access to all posts and tags using:
+
+`const allPosts = Object.values(import.meta.glob('../posts/*.md', { eager: true }));`
+
+and 
+
+`const tags = [...new Set(allPosts.map((post: any) => post.frontmatter.tags).flat())];`
+
+I then created a list of all tags, added links and styling.
+
+Finally, I added the new page to my navigation bar component.
