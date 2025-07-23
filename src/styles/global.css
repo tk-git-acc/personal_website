@@ -1,6 +1,5 @@
 html {
-  background-color: #3E6317;
-  color: black;
+  background-color: #000000;
   font-family: sans-serif;
 }
 
@@ -9,9 +8,8 @@ body {
   width: 100%;
   padding: 1rem;
   line-height: 1.5;
-  color: black;
-  background-color: #ABDF75;
-  border: 5px solid #000000
+  color: #39FF14;
+  background-color: #000000;
 }
 
 @media screen and (min-width: 636px) {
@@ -29,8 +27,14 @@ body {
 h1 {
   margin: 1rem 0;
   font-size: 2.5rem;
-  color: black;
+  color: #39FF14;
 }
+
+ul {
+  padding-left: 20px;
+}
+
+
 
 /* nav styles */
 .hamburger {
@@ -43,14 +47,14 @@ h1 {
   width: 40px;
   height: 5px;
   margin-bottom: 10px;
-  background-color: #000000;
+  background-color: #39FF14;
 }
 
 .nav-links {
   width: 100%;
   top: 5rem;
   left: 48px;
-  background-color: #000000;
+  background-color: #39FF14;
   display: none;
   margin:auto;
 }
@@ -68,9 +72,7 @@ h1 {
 
 .nav-links a:hover,
 .nav-links a:focus {
-  background-color: #ABDF75;
-  color: #000000;
-  border: 5px solid #000000;
+  border: 5px solid #39FF14;
 }
 
 a:visited {
@@ -99,4 +101,8 @@ a:visited {
   .hamburger {
   display: none;
   } 
+
+  ul {
+    padding-left: 40px;
+  }
 }

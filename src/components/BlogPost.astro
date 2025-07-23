@@ -5,6 +5,20 @@ const formattedDate = rawDate.toLocaleDateString("en-GB");
 ---
 <li>
   <a href={post.url}>
-    {formattedDate}: {post.frontmatter.title}
+    {post.frontmatter.title} (<small>{formattedDate}</small>)
   </a>
 </li>
+
+<style>
+  li {
+    margin: 0.5rem 0;
+  }
+
+  a {
+    color: #39FF14;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
