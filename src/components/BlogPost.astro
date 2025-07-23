@@ -1,0 +1,10 @@
+---
+const { post } = Astro.props;
+const rawDate = new Date(post.frontmatter.pubDate);
+const formattedDate = rawDate.toLocaleDateString("en-GB");
+---
+<li>
+  <a href={post.url}>
+    {formattedDate}: {post.frontmatter.title}
+  </a>
+</li>

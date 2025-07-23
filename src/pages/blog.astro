@@ -1,20 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import BlogPost from '../components/BlogPost.astro';
 const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
 const pageTitle = "Blog";
 ---
 <BaseLayout pageTitle={pageTitle}>
-	<ul>
-		{allPosts.map((post: any) => {
-		const rawDate = new Date(post.frontmatter.pubDate);
-		const formattedDate = rawDate.toLocaleDateString("en-GB"); // UK format
-		return (
-			<li> 			
-				<a href={post.url}>
-					{formattedDate}: {post.frontmatter.title}
-				</a>
-			</li>
-		);
-		})}
-	</ul>
+  <ul>
+    {allPosts.map((post: any) => <BlogPost post={post} />)}
+  </ul>
 </BaseLayout>
