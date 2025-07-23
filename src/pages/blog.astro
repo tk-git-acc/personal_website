@@ -10,9 +10,9 @@ const pageTitle = "Blog";
 		const formattedDate = rawDate.toLocaleDateString("en-GB"); // UK format
 		return (
 			<li> 			
-			<a href={post.url}>
-				{formattedDate}: {post.frontmatter.title}
-			</a>
+				<a href={post.url}>
+					{formattedDate}: {post.frontmatter.title}
+				</a>
 			</li>
 		);
 		})}
