@@ -1,6 +1,6 @@
 html {
   background-color: #000000;
-  font-family: sans-serif;
+  font-family: 'Fira Mono', 'VT323', monospace, Georgia, 'Times New Roman', Times, serif;
 }
 
 body {
@@ -19,7 +19,7 @@ body {
   body {
     max-width: 80ch;
     margin: 0 auto;
-    padding: 1rem; /* ADD padding on larger screens */
+    padding: 3rem; /* ADD padding on larger screens */
   }
 }
 
