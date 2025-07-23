@@ -5,6 +5,16 @@ const pageTitle = "Blog";
 ---
 <BaseLayout pageTitle={pageTitle}>
 	<ul>
-    {allPosts.map((post: any) => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
+		{allPosts.map((post: any) => {
+		const rawDate = new Date(post.frontmatter.pubDate);
+		const formattedDate = rawDate.toLocaleDateString("en-GB"); // UK format
+		return (
+			<li> 			
+			<a href={post.url}>
+				{formattedDate}: {post.frontmatter.title}
+			</a>
+			</li>
+		);
+		})}
 	</ul>
 </BaseLayout>
