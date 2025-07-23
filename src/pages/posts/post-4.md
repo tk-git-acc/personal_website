@@ -25,3 +25,18 @@ This involved creating a new file 'src/pages/tags/[tag].astro' and using the get
 I added the props to the new file that allowed it to utilise the data from each blog post.
 
 I then filtered the posts shown on each dynamically created tag page to only show the relevant posts.
+
+## Automatically creating new pages for tags
+I edited [tag].astro to automatically check for unique tags in the blog posts, rather than having to add them statically each time a new umique tag is added.
+
+This was done by creating an array of unique tags using JS/TypeScript using:
+
+`const uniqueTags = [...new Set(allPosts.map((post: any) => post.frontmatter.tags).flat())];`
+
+I then edited the existing params to reflect this change.
+
+Finally, I added the line below:
+
+`{posts.map((post: any) => <BlogPost post={post} />)}`
+
+This loops through the post array and creates a <BlogPost /> component for each.
