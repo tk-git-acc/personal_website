@@ -11,17 +11,45 @@ const identity = {
   occupation: "IT Engineer",
 };
 
-const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "SQL", "Azure", "Linux & Windows Operating Systems", "System Admin"];
+const skills = [
+  "HTML", "CSS", "JavaScript", "TypeScript", "React", "Astro", "SQL", "Azure", "Linux", "System Admin", "Windows", "MacOS", "Office 365", "Bash", "Git", "GitHub", "Networking", "Python", "AWS"
+].sort((a, b) => a.localeCompare(b));
 
 const skillColor = "navy";
 ---
 <BaseLayout pageTitle={pageTitle}>
-	<p>I live in the {identity.country}, working as an {identity.occupation}.</p>
-	<p>I am buiding this site using the Astro JS web framework.</p>
-	<p>This website will include projects that I work on.</p>
-	<p>My skills & experience include:</p>
-	<ul>
-	{skills.map((skill) => <li class="skill">{skill}</li>)}
-	</ul>
+    <p>I live in the {identity.country}, working as an {identity.occupation}.</p>
+    <p>I am buiding this site using the Astro JS web framework.</p>
+    <p>This website will include projects that I work on.</p>
+    <hr class="skills-divider" />
+    <h2>Skills & experience</h2>
+    <ul>
+    {skills.map((skill) => <li class="skill">{skill}</li>)}
+    </ul>
 </BaseLayout>
+
+<style>
+  .skills-divider {
+    border: none;
+    border-top: 2px solid #39FF14;
+    margin: 2em 0 1em 0;
+  }
+  ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    gap: 0.5em 1em; 
+    padding-left: 0;
+    list-style-position: inside;
+  }
+  @media screen and (max-width: 635px) {
+    ul {
+      grid-template-columns: 1fr 1fr 1fr; 
+      gap: 0.5em 0.5em; 
+    }
+  }
+  .skill {
+    margin-bottom: 0.5em;
+    font-size: 0.95em;
+  }
+</style>
 
