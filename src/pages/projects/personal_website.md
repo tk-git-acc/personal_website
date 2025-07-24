@@ -13,7 +13,4 @@ I have been working on a personal website.
 
 The purpose of this was to learn new skills, whilst creating a place where I am able to share my projects, skills and learning.
 
-To build this website, I used the Astro JS. Astro is a JavaScript web framework optimized for building fast, content-driven websites. 
-
-Find my personal website at the following URL:
-https://tk-portfolio-site.netlify.app/
+To build this website, I used the Astro JS. Astro is a JavaScript web framework optimized for building fast, content-driven websites.
