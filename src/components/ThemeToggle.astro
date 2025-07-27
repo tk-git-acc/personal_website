@@ -1,0 +1,53 @@
+---
+---
+<button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light theme">
+  <span class="theme-icon">🌙</span>
+</button>
+
+<script>
+  // Prevent flash of wrong theme
+  function initializeTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    const systemPreference = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    const theme = (savedTheme === 'dark' || savedTheme === 'light') ? savedTheme : systemPreference;
+    
+    document.documentElement.setAttribute('data-theme', theme);
+    updateIcon(theme);
+  }
+
+  function updateIcon(theme: 'light' | 'dark') {
+    const themeIcon = document.querySelector('.theme-icon');
+    if (themeIcon) {
+      themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+    }
+  }
+
+  function toggleTheme() {
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+    const newTheme: 'light' | 'dark' = currentTheme === 'dark' ? 'light' : 'dark';
+    
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    updateIcon(newTheme);
+  }
+
+  // Initialize theme on page load
+  initializeTheme();
+
+  // Add event listener when DOM is ready
+  document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('theme-toggle');
+    if (themeToggle) {
+      themeToggle.addEventListener('click', toggleTheme);
+    }
+  });
+
+  // Listen for system theme changes
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+    if (!localStorage.getItem('theme')) {
+      const newTheme: 'light' | 'dark' = e.matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', newTheme);
+      updateIcon(newTheme);
+    }
+  });
+</script>
