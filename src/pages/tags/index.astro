@@ -13,9 +13,14 @@ const pageTitle = "Tag Index";
 </BaseLayout>
 <style>
   a {
-    color: #39FF14;
+    color: #2563eb;
     text-decoration: none;
     text-transform: lowercase;
+    transition: color 0.2s ease;
+  }
+
+  a:hover {
+    color: #1e40af;
   }
 
   .tags {
@@ -25,10 +30,17 @@ const pageTitle = "Tag Index";
 
   .tag {
     margin: 0.25em;
-    border: dotted 1px #39FF14;
+    border: 1px solid #e5e7eb;
     border-radius: .5em;
     padding: .5em 1em;
     font-size: 1em;
-    background-color: #111111;
+    background-color: #f8fafc;
+    color: #374151;
+    transition: all 0.2s ease;
+  }
+
+  .tag:hover {
+    background-color: #eff6ff;
+    border-color: #2563eb;
   }
 </style>

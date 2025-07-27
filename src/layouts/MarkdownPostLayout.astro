@@ -18,7 +18,14 @@ const formattedDate = new Date(frontmatter.pubDate).toLocaleDateString("en-GB");
 </BaseLayout>
 <style>
   a {
-    color: #39FF14;
+    color: #2563eb;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  a:hover {
+    color: #1e40af;
+    text-decoration: underline;
   }
 
   .tags {
@@ -28,12 +35,22 @@ const formattedDate = new Date(frontmatter.pubDate).toLocaleDateString("en-GB");
 
   .tag {
     margin: 0.25em;
-    border: dotted 1px #39FF14;
+    border: 1px solid #e5e7eb;
     border-radius: .5em;
     padding: .5em 1em;
     font-size: 1em;
-    background-color: #111111;
+    background-color: #f8fafc;
     text-transform: lowercase;
+    color: #374151;
+  }
+
+  .tag a {
+    color: #2563eb;
+  }
+
+  .tag:hover {
+    background-color: #eff6ff;
+    border-color: #2563eb;
   }
 
   img {
@@ -41,5 +58,7 @@ const formattedDate = new Date(frontmatter.pubDate).toLocaleDateString("en-GB");
     max-width: 100%;
     height: auto;
     margin-top: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 </style>
