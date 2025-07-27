@@ -3,35 +3,8 @@ const { post } = Astro.props;
 const rawDate = new Date(post.frontmatter.pubDate);
 const formattedDate = rawDate.toLocaleDateString("en-GB");
 ---
-<li>
-  <a href={post.url}>
-    {post.frontmatter.title} (<small>{formattedDate}</small>)
+<li class="blog-post-item">
+  <a href={post.url} class="link">
+    {post.frontmatter.title} (<small class="text-muted">{formattedDate}</small>)
   </a>
 </li>
-
-<style>
-  li {
-    margin: 0.5rem 0;
-    list-style-type: none;
-  }
-
-  li a {
-    color: #2563eb !important;
-    text-decoration: none;
-    transition: color 0.2s ease;
-    display: block;
-    padding: 0.5rem;
-    border-radius: 0.25rem;
-  }
-
-  li a:hover {
-    color: #1e40af !important;
-    background-color: #eff6ff;
-    text-decoration: none;
-  }
-
-  small {
-    color: #6b7280;
-    font-weight: normal;
-  }
-</style>

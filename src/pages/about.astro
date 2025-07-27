@@ -1,8 +1,5 @@
 ---
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import '../styles/global.css';
 const pageTitle = "About";
 
 const identity = {
@@ -14,42 +11,15 @@ const identity = {
 const skills = [
   "HTML", "CSS", "JavaScript", "TypeScript", "React", "Astro", "SQL", "Azure", "Linux", "System Admin", "Windows", "MacOS", "Office 365", "Bash", "Git", "GitHub", "Networking", "Python", "AWS"
 ].sort((a, b) => a.localeCompare(b));
-
-const skillColor = "navy";
 ---
 <BaseLayout pageTitle={pageTitle}>
     <p>I live in the {identity.country}, working as an {identity.occupation}.</p>
     <p>I am buiding this site using the Astro JS web framework.</p>
     <p>This website will include projects that I work on.</p>
-    <hr class="skills-divider" />
+    <hr class="divider" />
     <h2>Skills & experience</h2>
-    <ul>
-    {skills.map((skill) => <li class="skill">{skill}</li>)}
+    <ul class="skills-grid">
+    {skills.map((skill) => <li class="skill-item">{skill}</li>)}
     </ul>
 </BaseLayout>
-
-<style>
-  .skills-divider {
-    border: none;
-    border-top: 2px solid #2563eb;
-    margin: 2em 0 1em 0;
-  }
-  ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr; 
-    gap: 0.5em 1em; 
-    padding-left: 0;
-    list-style-position: inside;
-  }
-  @media screen and (max-width: 635px) {
-    ul {
-      grid-template-columns: 1fr 1fr 1fr; 
-      gap: 0.5em 0.5em; 
-    }
-  }
-  .skill {
-    margin-bottom: 0.5em;
-    font-size: 0.95em;
-  }
-</style>
 

@@ -4,61 +4,15 @@ const { frontmatter } = Astro.props;
 const formattedDate = new Date(frontmatter.pubDate).toLocaleDateString("en-GB");
 ---
 <BaseLayout pageTitle={frontmatter.title}>
-    <p>{formattedDate}</p>
+    <p class="text-muted">{formattedDate}</p>
     <p><em>{frontmatter.description}</em></p>
-    <div class="tags">
+    <div class="tags-container">
         {frontmatter.tags.map((tag: string) => (
         <p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>
         ))}
     </div>
     <p>Written by: {frontmatter.author}</p>
-    <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
+    <img src={frontmatter.image.url} alt={frontmatter.image.alt} class="image-responsive" />
 
     <slot />
 </BaseLayout>
-<style>
-  a {
-    color: #2563eb;
-    text-decoration: none;
-    transition: color 0.2s ease;
-  }
-
-  a:hover {
-    color: #1e40af;
-    text-decoration: underline;
-  }
-
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .tag {
-    margin: 0.25em;
-    border: 1px solid #e5e7eb;
-    border-radius: .5em;
-    padding: .5em 1em;
-    font-size: 1em;
-    background-color: #f8fafc;
-    text-transform: lowercase;
-    color: #374151;
-  }
-
-  .tag a {
-    color: #2563eb;
-  }
-
-  .tag:hover {
-    background-color: #eff6ff;
-    border-color: #2563eb;
-  }
-
-  img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    margin-top: 1rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-</style>
